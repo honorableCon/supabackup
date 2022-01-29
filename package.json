@@ -1,0 +1,16 @@
+{
+  "name": "supabackup",
+  "version": "0.0.1",
+  "description": "",
+  "main": "supabackup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": ["supabase", "database", "backup"],
+  "author": "Honorable Con",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.29.4"
+  }
+}

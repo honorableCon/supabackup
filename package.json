@@ -1,16 +1,24 @@
 {
   "name": "supabackup",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
-  "main": "supabackup.js",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
-  "keywords": ["supabase", "database", "backup"],
-  "author": "Honorable Con",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honorableCon/supabackup.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/honorableCon/supabackup/issues"
+  },
+  "homepage": "https://github.com/honorableCon/supabackup#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^1.29.4"
+    "dotenv": "^14.3.2",
+    "supabackup": "^0.0.1"
   }
 }

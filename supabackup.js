@@ -21,3 +21,16 @@ export const backup = async (supabackup, bucket, tables) => {
         });
     }
 }
+
+export const restore = async (supabackup, bucket, folder, tables) => {
+
+    for (const table of tables) {
+        supabackup.storage.downloadFile(bucket, folder, table)
+        .then( data => { 
+            supabackup.database.clear(table)
+            .then( () => {
+                supabackup.database.insert(table, JSON.parse(data))
+            })
+        })
+    }
+}

@@ -7,10 +7,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "keywords": ["supabase", "database", "backup"],
+  "keywords": [
+    "supabase",
+    "database",
+    "backup"
+  ],
   "author": "Honorable Con",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^1.29.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honorableCon/supabackup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/honorableCon/supabackup/issues"
+  },
+  "homepage": "https://github.com/honorableCon/supabackup#readme"
 }

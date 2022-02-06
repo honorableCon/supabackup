@@ -14,6 +14,21 @@ export class Database {
         
         return data
     }
+
+    async insert(table, dataToInsert){
+        const { data, error } = await this.supabase
+        .from(table)
+        .insert(dataToInsert)
+
+        return data
+    }
+
+    async clear(table){
+        const { data, error } = await this.supabase
+        .from(table)
+        .delete()
+        return {data, error}
+    }
 }
 
 export class Storage {
@@ -40,5 +55,13 @@ export class Storage {
         })
 
         return {data, error};
+    }
+
+    async downloadFile(bucket, folder, file){
+        const { data, error } = await this.supastorage
+        .from(bucket)
+        .download(`${folder}/${file}.json`)
+    
+        return data.text();
     }
 }

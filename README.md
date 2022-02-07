@@ -2,7 +2,7 @@
 
 [![Made-In-Senegal](https://github.com/GalsenDev221/made.in.senegal/blob/master/assets/badge.svg)](https://github.com/GalsenDev221/made.in.senegal) 
 
-Supabackup is a node package, that allows you to easily perform your supabase backup operations for free.<br>
+Supabackup is a node package, that allows you to easily perform your supabase backup (restore) operations for free.<br>
 This package creates a backup of your given database tables. <br>
 The backup is stored on your supabase storage. (in json format) <br>
 You can add this on your administration interface to add backup feature.
@@ -115,12 +115,12 @@ restore(
 );
 ```
 
-#### Contributing 🤝
+### Contributing 🤝
 
 Bug reports and Pull Requests are welcome 👋🏽  
 You can tell me on **[issues](https://github.com/honorableCon/supabackup/issues)**
 
 
-#### License 🔖
+### License 🔖
 
 This project is under **[MIT License](https://opensource.org/licenses/MIT)**.

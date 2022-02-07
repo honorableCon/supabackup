@@ -83,6 +83,38 @@ backup(supabackup, "Backup Chat", ['user', 'chat']);
 ```
 You can found the backup : `storage > Backup Chat > Backup [Date]`
 
+<br>
+
+## Restoring
+You can your database using the restore() method.
+### Parameters
+1. supabackupClient `required` 
+      > create with `initializeClient()`
+2. bucket `string` `required` 
+      > name that you give to your bucket (storage container)
+3. folder `string` `required` 
+      > backup folder name that you can find in your bucket
+      > example : "Backup [Date backup]"
+4. tables `required` `array(string)` 
+      > array of tables that you want to backup
+
+### Example 💛
+#### backup()
+```javascript
+import { initializeClient, restore } from 'supabackup'
+
+// Create a single supabase client for interacting with your database 
+const supabackup = initializeClient('https://xyzcompany.supabase.co', 'service-key')
+
+// Restore the given tables (chat, user) on the database
+restore(
+    supabackup, 
+    "Backup", 
+    'Backup 2022-01-30T13:48:12.589Z', 
+    ['user', 'chat']
+);
+```
+
 #### Contributing 🤝
 
 Bug reports and Pull Requests are welcome 👋🏽  
